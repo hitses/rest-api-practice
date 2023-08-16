@@ -1,0 +1,31 @@
+### Get movies
+GET http://localhost:3000/movies/
+
+### Get movie
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3/
+
+### Get movies by genre
+GET http://localhost:3000/movies?genre=action/
+
+### Create movie
+POST http://localhost:3000/movies/
+Content-Type: application/json
+
+{
+  "otro": "Otro que no pasa a la response",
+  "title": "Avatar 2",
+  "year": 2023,
+  "director": "James Cameron",
+  "duration": 197,
+  "poster": "https://i.ebayimg.com/images/g/URcAAOSwC31jZQ11/s-l1600.jpg",
+  "genre": ["Action", "Adventure", "Fantasy"],
+  "rate": 7.9
+}
+
+### Update movie
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3/
+Content-Type: application/json
+
+{
+  "year": 2022
+}
